@@ -3,9 +3,15 @@ var gamePattern = [];
 var userClickPattern = [];
 var isGameStart = false;
 var level = 0;
+var highestLevel = 0;
 
 function nextSequence() {
   level++;
+  if(level > highestLevel)
+  {
+    highestLevel = level;
+    $("#score").text(level);
+  }
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
@@ -49,7 +55,7 @@ $(".btn").click(function(){
   }
   //wrong input
   if(!isUserCurrentCorrect){
-    var audio = new Audio("sounds/wrong.mp3");
+    var audio = new Audio("sounds/sadsad.m4a");
     audio.play();
     $("body").addClass("game-over");
     setTimeout(function() {
@@ -100,15 +106,17 @@ $(document).keypress(function(){
 
 function showYeah()
 {
+  var yeahAudio = new Audio("sounds/yeahyeah.m4a");
   var yeah = false;
-  if(level % 3 == 0){
+  if(level % 2 == 0){
     yeah = true;
+    yeahAudio.play();
     $("#instruction").text("Yeah!");
     $("#instruction").after("<img id='yeah' src='image/yeah.jpg' width='200px'/>");
     setTimeout(function() {
       $("#instruction").text("input the whole sequence");
       $("#yeah").remove();
-  }, 1000);
+  }, 1300);
   }
   if(level === 20){
     $("#instruction").text("You must be really bored");
