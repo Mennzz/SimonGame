@@ -74,7 +74,7 @@ $(".btn").click(function(){
 }
 })
 
-$(document).keypress(function(){
+function startGame(){
   if(!isGameStart)
   {
     nextSequence();
@@ -86,6 +86,15 @@ $(document).keypress(function(){
   else{
     alert("please click the sequence");
   }
+}
+
+$("#level-title").click(function(){
+
+  startGame();
+})
+
+$(document).keypress(function(){
+  startGame();
 }
 );
 

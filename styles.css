@@ -9,6 +9,9 @@ body {
   margin:  5%;
   color: #FEF2BF;
 }
+#level-title:hover{
+  cursor: pointer;
+}
 
 .instruction{
   font-size: 1.5rem;
@@ -17,7 +20,7 @@ body {
 
 .container {
   display: block;
-  width: 50%;
+  width: 80%;
   margin: auto;
 
 }
@@ -25,8 +28,8 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border: 10px solid black;
   border-radius: 20%;
 }
