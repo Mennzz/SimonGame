@@ -110,6 +110,9 @@ function showYeah()
       $("#yeah").remove();
   }, 1000);
   }
+  if(level === 20){
+    $("#instruction").text("You must be really bored");
+  }
   return yeah;
 }
 
