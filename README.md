@@ -2,6 +2,6 @@
 
 A javascript implementation of simon game using jQuery
 
-#Demo
+# Demo
 You can try out the [demo](https://mennzz.github.io/SimonGame/)
-![Game Screenshot](/images/cover.JPG)
+![Game Screenshot](images/cover.JPG)
